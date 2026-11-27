@@ -1,0 +1,366 @@
+<!doctype html>
+<html lang="en" class="locked">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Ashutosh &amp; Simran</title>
+<meta name="description" content="Wedding invitation · Ashutosh &amp; Simran · Tuesday, 02 February 2027 · Shahtalai, Himachal Pradesh">
+<meta name="theme-color" content="#1C2F45">
+<!-- link preview (WhatsApp, Facebook, iMessage). After the site has its address, set og:image/og:url to the full https:// link -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="Ashutosh &amp; Simran · Wedding Invitation">
+<meta property="og:description" content="Tuesday, 02 February 2027 · Shahtalai, Himachal Pradesh. Tap to open.">
+<meta property="og:image" content="og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,600&display=swap" rel="stylesheet">
+<link rel="preload" as="image" href="assets/pages/cover-l.webp?v=4">
+<link rel="preload" as="image" href="assets/pages/cover-r.webp?v=4">
+<style>
+:root{--col:min(100vw,480px);--gold:#F3DE9E}
+*{box-sizing:border-box;margin:0;padding:0}
+html{background:#120F0C;-webkit-text-size-adjust:100%;overflow-y:scroll}
+/* locked = cover showing; the scrollbar stays put so nothing jumps sideways when it opens */
+html.locked body{height:100vh;overflow:hidden}
+body{min-height:100vh;font-family:'Cormorant Garamond',serif}
+img{display:block;user-select:none;-webkit-user-drag:none}
+.page{width:var(--col);margin:0 auto;position:relative;overflow-x:clip;background:#1C2F45}
+
+/* ---------- cover doors ---------- */
+.cover{position:fixed;top:0;bottom:0;left:50%;width:var(--col);translate:-50% 0;z-index:100;cursor:pointer;-webkit-tap-highlight-color:transparent;
+  container-type:size;perspective:1800px;overflow:hidden}
+.cover .bg{position:absolute;inset:0;background:radial-gradient(120% 80% at 50% 45%,#22395A 0%,#1C2F45 55%,#121E2E 100%)}
+/* contain-fit: the whole card is visible on every phone, nothing cropped */
+.cover .art{position:absolute;left:50%;top:50%;width:min(100cqw,calc(100cqh * 1536 / 2752));aspect-ratio:1536/2752;translate:-50% -50%;display:flex;transform-style:preserve-3d}
+.door{position:relative;width:50%;height:100%;will-change:transform;backface-visibility:hidden}
+.door img{width:100%;height:100%}
+.door.l img{width:calc(100% + 1px)} /* overlap the halves so no hairline seam shows */
+.door.l{transform-origin:0 50%;z-index:1}.door.r{transform-origin:100% 50%}
+/* measured on the cover artwork: the pill spans x 577-959, y 1841-1956 of 1536x2752; above both doors */
+.tapglow{position:absolute;left:37.57%;top:66.9%;width:24.87%;height:4.18%;border-radius:999px;pointer-events:none;z-index:2;transform:translateZ(2px);
+  box-shadow:0 0 0 0 rgba(255,214,120,.7);animation:tap 1.8s ease-out infinite}
+@keyframes tap{0%{box-shadow:0 0 0 0 rgba(255,214,120,.75)}100%{box-shadow:0 0 0 16px rgba(255,214,120,0)}}
+.sheen{position:absolute;inset:1.6% 2.6%;pointer-events:none;z-index:2;transform:translateZ(2px);background:linear-gradient(115deg,transparent 35%,rgba(255,240,200,.28) 48%,transparent 60%);
+  background-size:250% 100%;animation:sheen 4.5s ease-in-out infinite;mix-blend-mode:soft-light}
+@keyframes sheen{from{background-position:120% 0}to{background-position:-120% 0}}
+
+/* ---------- shared stage ---------- */
+.stage{position:sticky;top:0;height:100vh;height:100svh;overflow:hidden;container-type:size;background:#1C2F45}
+.art{position:absolute;left:50%;top:50%;translate:-50% -50%;container-type:size}
+.stage>.art{width:max(100cqw,calc(100cqh * var(--ar)));aspect-ratio:var(--ar)}
+.ly,.ly>div{position:absolute;inset:0;will-change:transform;pointer-events:none}
+.ly img.full{position:absolute;inset:0;width:100%;height:100%}
+.sh-peaks img{filter:drop-shadow(0 -0.4cqh 0.6cqh rgba(0,0,0,.35))}
+.sh-hills img{filter:drop-shadow(0 -0.5cqh 0.8cqh rgba(0,0,0,.38))}
+#front img{filter:drop-shadow(0 0 1.2cqh rgba(0,0,0,.45))}
+/* pages 2-5: the concept's own shadows are in the artwork, so no extra CSS shadows on frame/scenery */
+/* invisible tap areas over artwork that already shows the button / phone numbers */
+.live.hit{position:absolute;pointer-events:auto;border-radius:1cqh;-webkit-tap-highlight-color:rgba(247,227,163,.25)}
+.band{position:absolute;will-change:transform,opacity}
+.band img{width:100%;height:100%;filter:drop-shadow(0 .15cqh .25cqh rgba(0,0,0,.45))}
+
+/* live (real text) elements that sit with the image bands */
+.live{display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;color:var(--gold);
+  font-weight:600;letter-spacing:.01em;text-shadow:0 .15cqh .35cqh rgba(0,0,0,.65);white-space:nowrap}
+.live{font-variant-numeric:lining-nums}
+.live.date{font-size:2.05cqh;line-height:1.25}
+.live.date::before{content:"";position:absolute;inset:-55% -14%;z-index:-1;border-radius:50%;
+  background:radial-gradient(closest-side,rgba(13,22,38,.78),rgba(13,22,38,.55) 55%,rgba(13,22,38,0))}
+.live.btn{pointer-events:auto;text-decoration:none;flex-direction:row;gap:.45em;font:700 2.05cqh/1 'Cormorant Garamond',serif;color:#FBE9B6;letter-spacing:.02em;
+  border-radius:999px;background:linear-gradient(180deg,#D24A35,#A52C20);box-shadow:inset 0 0 0 .22cqh #E9B44C,inset 0 0 0 .42cqh #7E1F17,0 .5cqh 1cqh rgba(0,0,0,.45)}
+.live.btn svg{width:1.7cqh;height:1.7cqh;flex:none}
+.live.tel{pointer-events:auto;text-decoration:none;flex-direction:row;gap:.5em;font-size:2.15cqh;line-height:1}
+.live.tel span{border-bottom:.12cqh dotted rgba(243,222,158,.6);padding-bottom:.15em}
+.live.tel svg{width:1.5cqh;height:1.5cqh;flex:none;opacity:.9}
+.live:focus-visible{outline:2px solid #F7E3A3;outline-offset:3px}
+
+/* page 1 (hero) */
+.hero{height:320vh;height:320svh;position:relative;z-index:1}
+.glow{position:absolute;left:64.8%;top:54.8%;width:62%;aspect-ratio:1;translate:-50% -50%;border-radius:50%;
+  background:radial-gradient(circle,rgba(255,214,120,.5) 0%,rgba(255,170,60,.2) 40%,rgba(255,150,40,0) 70%);mix-blend-mode:screen;animation:glow 4s ease-in-out infinite alternate}
+@keyframes glow{from{opacity:.55;scale:.92}to{opacity:1;scale:1.08}}
+.mist{position:absolute;left:-20%;right:-20%;top:57%;height:9%;background:radial-gradient(ellipse at center,rgba(255,246,230,.38),rgba(255,246,230,0) 70%);filter:blur(1.2cqh);animation:mist 14s ease-in-out infinite alternate}
+@keyframes mist{from{transform:translateX(-8%)}to{transform:translateX(8%)}}
+.words{position:absolute;left:18%;right:18%;top:15.2%;text-align:center;pointer-events:none}
+.nm{display:block;font-family:'Great Vibes',cursive;font-size:5.7cqh;line-height:1.12;padding:.35em .3em;margin:-.35em 0;   /* room for the tall A / S swashes, so the gold isn't cut at the top */
+  filter:drop-shadow(0 .25cqh .2cqh rgba(0,0,0,.55));
+  background:linear-gradient(100deg,#9C6A1E 0%,#D9A441 22%,#F7E3A3 40%,#FFF6D8 48%,#F7E3A3 56%,#D9A441 74%,#9C6A1E 100%);background-size:250% 100%;
+  -webkit-background-clip:text;background-clip:text;color:transparent;animation:shine 6s linear infinite}
+.nm .amp{font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:600;font-size:.62em;margin-right:.12em;vertical-align:.08em}
+@keyframes shine{from{background-position:100% 0}to{background-position:-150% 0}}
+.nm.b{margin-top:calc(-.7em - .4cqh)}   /* same gap between the names as before */
+.dt{margin-top:2.3cqh;font-size:2.35cqh;font-weight:600;letter-spacing:.03em;color:#E2BF73;text-shadow:0 .2cqh .3cqh rgba(0,0,0,.5);line-height:1.45}
+.dust{position:absolute;inset:0;pointer-events:none}
+.dust i{position:absolute;width:.5cqh;height:.5cqh;border-radius:50%;background:#FFE7A8;box-shadow:0 0 .8cqh #FFD36B;opacity:0;animation:float var(--d) ease-in-out var(--dl) infinite}
+@keyframes float{0%{opacity:0;transform:translate(0,0)}20%{opacity:.9}80%{opacity:.7}100%{opacity:0;transform:translate(var(--x),-14cqh)}}
+
+/* pages 2-5: each page holds still for a full screen of scrolling before the next slides over it */
+.pg{position:relative;height:300vh;height:300svh;margin-top:-100vh;margin-top:-100svh}
+.pg .stage{box-shadow:0 -24px 40px rgba(0,0,0,.55)}
+.pg:last-child{height:180vh;height:180svh}
+
+/* music + petals */
+.music{position:fixed;bottom:18px;right:calc(max(0px,(100vw - 480px) / 2) + 16px);z-index:95;width:48px;height:48px;border-radius:50%;border:0;cursor:pointer;display:none;place-items:center;
+  background:radial-gradient(circle at 35% 30%,#D9533F,#A42B1F);box-shadow:0 0 0 3px #E9A23B,0 0 0 5px #F3E6CC,0 10px 18px rgba(0,0,0,.4)}
+.music.show{display:grid}
+.music i{display:flex;gap:3px;align-items:flex-end;height:18px}
+.music i b{width:3px;background:#F7E3A3;border-radius:2px;height:5px}
+.music.playing i b{animation:eq .9s ease-in-out infinite alternate}
+.music.playing i b:nth-child(2){animation-delay:-.3s}.music.playing i b:nth-child(3){animation-delay:-.6s}.music.playing i b:nth-child(4){animation-delay:-.15s}
+@keyframes eq{from{height:4px}to{height:18px}}
+.cam{position:absolute;inset:0}
+/* petals: some drift in each scene's sky behind the text; others fall screen-wide in front,
+   but only down the decorated side borders, so they never cover a word */
+.petals{overflow:hidden}
+.petals-front{position:fixed;top:0;bottom:0;left:50%;width:var(--col);translate:-50% 0;pointer-events:none;z-index:60;overflow:hidden;container-type:size}
+.petal{position:absolute;top:-2cqh;width:1.1cqh;height:1.5cqh;border-radius:0 100% 0 100%;box-shadow:0 .2cqh .3cqh rgba(0,0,0,.25);animation:fall var(--d) linear var(--dl) infinite}
+@keyframes fall{0%{transform:translate(0,-5cqh) rotate(0)}25%{transform:translate(var(--sx),24cqh) rotate(110deg)}50%{transform:translate(0,52cqh) rotate(220deg)}75%{transform:translate(calc(var(--sx)*-1),80cqh) rotate(320deg)}100%{transform:translate(0,110cqh) rotate(430deg)}}
+@media (prefers-reduced-motion:reduce){*{animation:none!important}.petals,.petals-front{display:none}}
+</style>
+</head>
+<body>
+
+<!-- cover: the gate opens -->
+<div class="cover" id="cover" role="button" tabindex="0" aria-label="Tap to open the invitation">
+  <div class="bg"></div>
+  <div class="art">
+    <div class="door l" id="doorL"><img src="assets/pages/cover-l.webp?v=4" alt="Invitation cover: Ashutosh and Simran"></div>
+    <div class="door r" id="doorR"><img src="assets/pages/cover-r.webp?v=4" alt=""></div>
+    <div class="sheen"></div>
+    <div class="tapglow"></div>
+  </div>
+</div>
+
+<div class="petals-front" id="petalsFront"></div>
+<button class="music" id="music" aria-label="Play or pause music"><i><b></b><b></b><b></b><b></b></i></button>
+<audio id="bgm" src="music.mp3" loop preload="metadata"></audio>
+
+<main class="page" id="main">
+  <!-- PAGE 1 -->
+  <section class="hero" id="hero">
+    <div class="stage">
+      <div class="art" style="--ar:1080/1919">
+        <div class="ly" id="sky"><div><img class="full" src="assets/page1/1-sky.webp?v=4" alt=""></div></div>
+        <div class="ly"><div class="dust" id="dust"></div></div>
+        <div class="ly petals"><div></div></div>
+        <div class="ly" id="words"><div>
+          <div class="words">
+            <span class="nm" id="n1">Ashutosh</span>
+            <span class="nm b" id="n2"><span class="amp">&amp;</span>Simran</span>
+            <p class="dt" id="dt">02 February 2027<br>Shahtalai, Himachal Pradesh</p>
+          </div>
+        </div></div>
+        <div class="ly" id="sun"><div><div class="glow"></div><img class="full" src="assets/page1/2-sun.webp?v=4" alt=""></div></div>
+        <div class="ly sh-peaks" id="peaks"><div><img class="full" src="assets/page1/3-peaks.webp?v=4" alt=""></div></div>
+        <div class="ly"><div><div class="mist"></div></div></div>
+        <div class="ly sh-hills" id="hills"><div><img class="full" src="assets/page1/4-hills.webp?v=4" alt=""></div></div>
+        <div class="ly sh-front" id="front"><div><img class="full" src="assets/page1/5-front.webp?v=4" alt="Paper-cut arch with Himalayan mountains, a rising sun and two Madhubani peacocks"></div></div>
+      </div>
+    </div>
+  </section>
+  <!-- PAGES 2-5 are built from the manifest below -->
+</main>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script>
+const MANIFEST = {"2":{"w":1536,"h":2752,"bands":[{"src":"p2-t0.webp","x":44.466,"y":12.355,"w":11.133,"h":7.994},{"src":"p2-t1.webp","x":36.263,"y":21.003,"w":27.669,"h":2.58},{"src":"p2-t2.webp","x":24.87,"y":24.673,"w":50.456,"h":2.907},{"src":"p2-t3.webp","x":22.917,"y":28.343,"w":54.427,"h":4.215},{"src":"p2-t4.webp","x":27.799,"y":33.031,"w":44.727,"h":4.324},{"src":"p2-t5.webp","x":36.654,"y":37.573,"w":26.823,"h":1.672},{"src":"p2-t6.webp","x":29.036,"y":40.698,"w":41.797,"h":3.27},{"src":"p2-t7.webp","x":19.01,"y":44.586,"w":62.63,"h":1.853},{"src":"p2-t8.webp","x":46.615,"y":46.911,"w":7.031,"h":2.18},{"src":"p2-t9.webp","x":35.482,"y":49.964,"w":29.427,"h":3.27},{"src":"p2-grand-do.webp","x":21.029,"y":53.743,"w":57.943,"h":1.781},{"src":"p2-date-g.webp","x":32.161,"y":72.638,"w":36.719,"h":4.36}]},"3":{"w":1536,"h":2752,"bands":[{"src":"p3-t0.webp","x":37.5,"y":15.371,"w":25.065,"h":2.544},{"src":"p3-t1.webp","x":31.771,"y":18.677,"w":36.654,"h":5.378},{"src":"p3-t2.webp","x":24.349,"y":25.0,"w":51.302,"h":16.497},{"src":"p3-t3.webp","x":24.349,"y":43.096,"w":51.302,"h":17.587},{"src":"p3-t4.webp","x":24.349,"y":62.137,"w":51.302,"h":16.533}]},"4":{"w":1536,"h":2752,"bands":[{"src":"p4-t0.webp","x":29.362,"y":18.314,"w":41.211,"h":4.542},{"src":"p4-t1.webp","x":21.224,"y":22.638,"w":55.859,"h":10.938},{"src":"p4-t2.webp","x":20.182,"y":32.994,"w":59.505,"h":3.488},{"src":"p4-t3.webp","x":35.026,"y":35.828,"w":29.883,"h":3.561},{"src":"p4-directions.webp","x":34.18,"y":39.535,"w":31.641,"h":4.615}]},"5":{"w":1536,"h":2752,"bands":[{"src":"p5-t0.webp","x":33.464,"y":28.488,"w":32.943,"h":5.669},{"src":"p5-t1.webp","x":18.034,"y":35.756,"w":63.932,"h":3.561},{"src":"p5-t2.webp","x":23.112,"y":38.19,"w":53.711,"h":3.525},{"src":"p5-t3.webp","x":33.854,"y":40.661,"w":32.227,"h":3.161},{"src":"p5-t4.webp","x":29.948,"y":44.222,"w":40.104,"h":6.068},{"src":"p5-t5.webp","x":23.112,"y":50.836,"w":53.841,"h":4.578},{"src":"p5-t6.webp","x":30.99,"y":54.724,"w":38.151,"h":3.888},{"src":"p5-phones.webp","x":36.914,"y":59.302,"w":26.237,"h":4.07}]}};
+const ICON = {
+  pin: '<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a7 7 0 0 0-7 7c0 5.2 7 13 7 13s7-7.8 7-13a7 7 0 0 0-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/></svg>',
+  tel: '<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1l-2.3 2.2z"/></svg>'
+};
+/* tap areas laid exactly over the concept artwork's button and phone numbers (% of the page artwork) */
+const PAGES = [
+  {n: 2, label: 'Invitation', parallax: true, v: 5, split: true},   /* Gemini's separate mountains + hills layers */   /* v: page 2 sky/scene replaced by Gemini's clean versions */
+  {n: 3, label: 'Programme', cards: true, heroBg: true},   /* background = page 1's sky, sun, mountains and hills */
+  {n: 4, label: 'Venue', parallax: true, v: 5, live: [
+    {cls: 'hit', tag: 'a', x: 34, y: 39.5, w: 32, h: 4.7, html: '', label: 'Get directions to Baantalai Hotel and Resort',
+     href: 'https://www.google.com/maps/search/?api=1&query=Baantalai+Hotel+and+Resort+Shahtalai+Himachal+Pradesh+174030'}]},
+  {n: 5, label: 'RSVP', v: 5, noScene: true, live: [   /* Gemini's page 5 sky already includes the trees and hills */
+    {cls: 'hit', tag: 'a', x: 33, y: 58.8, w: 34, h: 2.9, html: '', label: 'Call +91 81091 03749', href: 'tel:+918109103749'},
+    {cls: 'hit', tag: 'a', x: 33, y: 61.7, w: 34, h: 2.9, html: '', label: 'Call +91 88270 26868', href: 'tel:+918827026868'}]}
+];
+(() => {
+  const $ = s => document.querySelector(s), $$ = s => [...document.querySelectorAll(s)];
+  const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  /* ---------- build pages 2-5 ---------- */
+  const main = $('#main');
+  PAGES.forEach((p, i) => {
+    const m = MANIFEST[p.n], ar = `${m.w}/${m.h}`;
+    const sec = document.createElement('section');
+    sec.className = 'pg'; sec.id = 'pg' + p.n; sec.style.zIndex = 2 + i; sec.setAttribute('aria-label', p.label);
+    const pos = b => `left:${b.x}%;top:${b.y}%;width:${b.w}%;height:${b.h}%`;
+    const bands = m.bands.map((b, k) => `<div class="band" style="${pos(b)}"><img src="assets/pages/${b.src}?v=4" alt=""></div>`).join('');
+    const live = (p.live || []).map(l => {
+      const tag = l.tag || 'div';
+      const link = l.href ? ` href="${l.href}" aria-label="${l.label}"${l.href.startsWith('http') ? ' target="_blank" rel="noopener"' : ''}` : '';
+      return `<${tag} class="live ${l.cls}"${link} style="${pos(l)}">${l.html}</${tag}>`;
+    }).join('');
+    /* .cam wraps every layer, so zooms move the whole composition together (shadows stay attached, nothing hidden shows) */
+    const H1 = f => `<img class="full" src="assets/page1/${f}.webp?v=4" alt="">`;
+    const skyHtml = p.heroBg
+      ? `<div class="ly pg-sky"><div>${H1('1-sky')}</div></div>`
+      : `<div class="ly pg-sky"><div><img class="full" src="assets/pages/p${p.n}-sky.webp?v=${p.v || 4}" alt=""></div></div>`;
+    const sceneHtml = p.noScene ? `<div class="ly pg-scene"><div></div></div>` : p.heroBg
+      ? `<div class="ly sh-scene pg-scene"><div>${H1('2-sun')}${H1('3-peaks')}${H1('4-hills')}</div></div>`
+      : p.split
+      ? `<div class="ly sh-scene pg-scene"><div><img class="full" src="assets/pages/p${p.n}-mountains.webp?v=${p.v || 4}" alt=""><img class="full pg-hills" src="assets/pages/p${p.n}-hills.webp?v=${p.v || 4}" alt=""></div></div>`
+      : `<div class="ly sh-scene pg-scene"><div><img class="full" src="assets/pages/p${p.n}-scene.webp?v=${p.v || 4}" alt=""></div></div>`;
+    sec.innerHTML = `<div class="stage"><div class="art" style="--ar:${ar}"><div class="cam">
+      ${skyHtml}
+      ${sceneHtml}
+      <div class="ly petals"><div></div></div>
+      <div class="ly pg-text"><div>${bands}</div></div>
+      <div class="ly sh-front pg-front"><div><img class="full" src="assets/pages/p${p.n}-front.webp?v=4" alt="${p.label} page"></div></div>
+      <div class="ly pg-hits"><div>${live}</div></div>
+    </div></div></div>`;
+    main.append(sec);
+  });
+
+  /* gold dust in page 1 */
+  for (let i = 0; i < 22; i++) {
+    const d = document.createElement('i');
+    d.style.cssText = `left:${22 + Math.random() * 56}%;top:${18 + Math.random() * 42}%;--d:${5 + Math.random() * 6}s;--dl:${-Math.random() * 8}s;--x:${(Math.random() - .5) * 8}cqh;scale:${.5 + Math.random()}`;
+    $('#dust').append(d);
+  }
+  function petals() {
+    if (reduce) return;
+    const cols = ['#E9A23B', '#D9533F', '#E58FA0', '#F2C14E'];
+    $$('.petals > div').forEach(box => {
+      for (let i = 0; i < 9; i++) {
+        const p = document.createElement('span'); p.className = 'petal';
+        p.style.cssText = `left:${12 + Math.random() * 76}%;background:${cols[i % 4]};--d:${10 + Math.random() * 9}s;--dl:${-Math.random() * 14}s;--sx:${2 + Math.random() * 4}cqh;scale:${.6 + Math.random() * .6}`;
+        box.append(p);
+      }
+    });
+    /* screen-wide petals in front, falling down the left and right borders only */
+    const front = $('#petalsFront');
+    for (let i = 0; i < 10; i++) {
+      const p = document.createElement('span'); p.className = 'petal';
+      const side = i % 2 ? 90 + Math.random() * 7 : 1 + Math.random() * 7;
+      p.style.cssText = `left:${side}%;background:${cols[(i + 1) % 4]};--d:${9 + Math.random() * 8}s;--dl:${-Math.random() * 14}s;--sx:${.4 + Math.random() * .9}cqh;scale:${.7 + Math.random() * .6}`;
+      front.append(p);
+    }
+  }
+  /* music: the button only appears if music.mp3 actually loads */
+  const audio = $('#bgm'), mBtn = $('#music');
+  let wantMusic = false;
+  const play = () => audio.play().then(() => mBtn.classList.add('playing')).catch(() => {});
+  function showMusic() { if (!wantMusic || audio.error) return; mBtn.classList.add('show'); play(); }
+  function startMusic() { wantMusic = true; if (audio.readyState >= 1) showMusic(); }
+  audio.addEventListener('loadedmetadata', showMusic);
+  audio.addEventListener('error', () => mBtn.classList.remove('show'));
+  mBtn.addEventListener('click', () => {
+    if (audio.paused) play();
+    else { audio.pause(); mBtn.classList.remove('playing'); }
+  });
+
+  const cover = $('#cover');
+  if (!window.gsap) {
+    cover.addEventListener('click', () => { cover.remove(); document.documentElement.classList.remove('locked'); startMusic(); petals(); }, {once: true});
+    return;
+  }
+  gsap.registerPlugin(ScrollTrigger);
+  ScrollTrigger.config({ignoreMobileResize: true});
+  const inner = id => `#${id} > div`;
+
+  /* ---------- page 1 initial state ---------- */
+  gsap.set(inner('front'), {scale: 1.45, autoAlpha: 0, transformOrigin: '50% 42%'});
+  /* hills rise just behind the peaks (layered), close enough that the mountains' base stays covered */
+  gsap.set(inner('peaks'), {yPercent: 14});
+  gsap.set(inner('hills'), {yPercent: 16});
+  gsap.set(inner('sun'), {yPercent: 16});
+  gsap.set(['#n1', '#n2'], {clipPath: 'inset(0 100% 0 0)'});
+  gsap.set('#dt', {autoAlpha: 0, y: 14});
+  gsap.from('.cover .art', {scale: 1.08, autoAlpha: 0, duration: 1.4, ease: 'power3.out'});
+
+  function intro() {
+    gsap.timeline({defaults: {ease: 'power3.out'}, onComplete: idle})
+      .to(inner('front'), {scale: 1, autoAlpha: 1, duration: 2.6, ease: 'power4.out'}, 0)
+      .to(inner('peaks'), {yPercent: 0, duration: 2.2}, .45)
+      .to(inner('hills'), {yPercent: 0, duration: 2.2}, .55)
+      .to(inner('sun'), {yPercent: 0, duration: 2.8, ease: 'power2.out'}, .75)
+      .to('#n1', {clipPath: 'inset(0 0% 0 0)', duration: 1.6, ease: 'power2.inOut'}, 1.5)
+      .to('#n2', {clipPath: 'inset(0 0% 0 0)', duration: 1.5, ease: 'power2.inOut'}, 2.3)
+      .to('#dt', {autoAlpha: 1, y: 0, duration: 1.1}, 3.1);
+  }
+  function idle() {
+    [['peaks', .25], ['hills', .45], ['sun', .6]].forEach(([id, a], i) =>
+      gsap.to(inner(id), {yPercent: -a, duration: 3.2 + i * .7, ease: 'sine.inOut', yoyo: true, repeat: -1}));
+    gsap.to(inner('front'), {scale: 1.008, duration: 4, ease: 'sine.inOut', yoyo: true, repeat: -1});
+  }
+  function open() {
+    cover.style.pointerEvents = 'none';
+    startMusic();
+    gsap.timeline({onComplete: () => { cover.remove(); document.documentElement.classList.remove('locked'); ScrollTrigger.refresh(); }})
+      .to('.tapglow,.sheen', {autoAlpha: 0, duration: .25})
+      .to('#doorL', {rotationY: -108, duration: 1.9, ease: 'power3.inOut'}, .1)
+      .to('#doorR', {rotationY: 108, duration: 1.9, ease: 'power3.inOut'}, .1)
+      .to('.cover .art', {scale: 1.12, duration: 1.9, ease: 'power2.in'}, .1)
+      .to('.cover .bg', {autoAlpha: 0, duration: .5}, 1.0)   /* only once the doors are well open */
+      .to(cover, {autoAlpha: 0, duration: .5}, 1.6)
+      .add(intro, .5)
+      .add(petals, 2.2);
+  }
+  cover.addEventListener('click', open, {once: true});
+  cover.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); cover.click(); } });
+
+  /* tilt parallax on page 1 */
+  /* the frame stays still; the scene behind it moves by the same amounts relative to the frame as the
+     original sway, so the depth feel is kept but the frame never slides off the mountains' edges */
+  const depth = {sky: -1.3, sun: -1.05, peaks: -.85, hills: -.55, front: 0, words: -.95};
+  const setters = Object.keys(depth).map(id => ({x: gsap.quickTo(`#${id}`, 'xPercent', {duration: .9, ease: 'power3.out'}), d: depth[id]}));
+  const tiltTo = nx => setters.forEach(s => s.x(-nx * s.d * 1.6));
+  addEventListener('pointermove', e => tiltTo((e.clientX / innerWidth - .5) * 2));
+  addEventListener('deviceorientation', e => { if (e.gamma != null) tiltTo(Math.max(-1, Math.min(1, e.gamma / 25))); });
+
+  /* page 1 scroll: step into the arch — finishes before page 2 starts to cover it */
+  gsap.timeline({scrollTrigger: {trigger: '#hero', start: 'top top', endTrigger: '#pg2', end: 'top bottom', scrub: 1.2}, defaults: {ease: 'none'}})
+    .to('#front', {scale: 1.5, transformOrigin: '50% 97%', duration: 1}, 0)
+    .to('#hills', {yPercent: 3, scale: 1.07, transformOrigin: '50% 100%', duration: 1}, 0)
+    .to('#peaks', {yPercent: 1, scale: 1.04, transformOrigin: '50% 100%', duration: 1}, 0)
+    .to('#sun', {yPercent: -8, scale: 1.08, transformOrigin: '65% 55%', duration: 1}, 0)
+    .to('#words', {yPercent: -12, duration: .6}, 0)
+    .to('#words', {autoAlpha: 0, duration: .3, ease: 'power1.in'}, .3)
+    .to('#sky', {scale: 1.05, duration: 1}, 0);
+
+  /* ---------- pages 2-5: entrance + scroll parallax ---------- */
+  PAGES.forEach((p, i) => {
+    const sec = $('#pg' + p.n), q = s => sec.querySelectorAll(s);
+    const front = q('.pg-front > div')[0], scene = q('.pg-scene > div')[0], bands = [...q('.band')];
+    const cam = q('.cam')[0], art = q('.art')[0];
+    /* arrival: the whole composition settles in from a gentle zoom; the scenery rises and fades in */
+    gsap.set(cam, {scale: 1.07, transformOrigin: '50% 55%'});
+    gsap.set(scene, {yPercent: 3, autoAlpha: 0});
+    /* every line and every Programme card arrives the same way: rises, un-blurs and fades in */
+    gsap.set(bands, {y: 26, autoAlpha: 0, scale: .96, filter: 'blur(6px)'});
+    const tl = gsap.timeline({paused: true, defaults: {ease: 'power3.out'}})
+      .to(cam, {scale: 1, duration: 1.8, ease: 'power4.out'}, 0)
+      .to(scene, {yPercent: 0, duration: 1.4}, .1)
+      .to(scene, {autoAlpha: 1, duration: .8, ease: 'power1.out'}, .1);
+    bands.forEach((b, k) => {
+      const at = .7 + k * (p.cards ? .3 : .17);
+      tl.to(b, {y: 0, autoAlpha: 1, scale: 1, filter: 'blur(0px)', duration: .9}, at);
+    });
+    /* drop the finished blur filter so text stays crisp */
+    tl.eventCallback('onComplete', () => gsap.set(bands, {clearProps: 'filter'}));
+    ScrollTrigger.create({trigger: sec, start: 'top 78%', onEnter: () => tl.play(), onLeaveBack: () => tl.reverse()});
+    /* while the page holds: the whole arch eases toward you, and the text floats up at its own depth */
+    const last = i === PAGES.length - 1;
+    const st = () => ({trigger: sec, start: 'top top', end: last ? 'bottom bottom' : () => '+=' + innerHeight, scrub: 1});
+    gsap.to(art, {scale: 1.06, transformOrigin: '50% 96%', ease: 'none', scrollTrigger: st()});
+    /* cards stay put (they cover scenery that isn't meant to be seen); text lines drift over clean sky */
+    if (!p.cards) gsap.to(sec.querySelector('.pg-text'), {yPercent: -3, ease: 'none', scrollTrigger: st()});
+    /* mountains & hills sink and swell slightly behind the arch (pages whose scenery continues under the frame) */
+    if (p.parallax) gsap.to(sec.querySelector('.pg-scene'), {yPercent: 2, scale: 1.03, transformOrigin: '50% 100%', ease: 'none', scrollTrigger: st()});
+    /* with separate layers, the hills also slide a little more than the mountains behind them */
+    if (p.split) gsap.to(sec.querySelector('.pg-hills'), {yPercent: 1.5, ease: 'none', scrollTrigger: st()});
+  });
+})();
+</script>
+</body>
+</html>
